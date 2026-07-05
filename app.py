@@ -10,7 +10,7 @@ st.write("Upload a CSV and get instant summary stats and charts.")
 file = st.file_uploader("Upload a CSV file", type=["csv"])
 
 if file is not None:
-    df = pd.read_csv(file)
+    df = pd.read_csv(file, sep=None, engine='python')
 
     # --- Overview ---
     st.subheader("Overview")
